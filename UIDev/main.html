@@ -1,0 +1,437 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no">
+
+    <title>Expert exchange</title>
+
+    <link rel="shortcut icon" href="assets/img/favicon.png" />
+
+    <meta name="description" content="">
+
+    <!-- CSS -->
+    <script src="assets/js/vendors.js"></script>
+    <link href="assets/css/preload.css" rel="stylesheet">
+<link href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-formhelpers/2.3.0/css/bootstrap-formhelpers.min.css" rel="stylesheet">
+<script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-formhelpers/2.3.0/js/bootstrap-formhelpers.min.js"></script>
+    <!-- Compiled in vendors.js -->
+    <!--
+    <link href="assets/css/bootstrap.min.css" rel="stylesheet">
+    <link href="assets/css/bootstrap-switch.min.css" rel="stylesheet">
+    <link href="assets/css/font-awesome.min.css" rel="stylesheet">
+    <link href="assets/css/animate.min.css" rel="stylesheet">
+    <link href="assets/css/slidebars.min.css" rel="stylesheet">
+    <link href="assets/css/lightbox.css" rel="stylesheet">
+    <link href="assets/css/jquery.bxslider.css" rel="stylesheet" />
+    <link href="assets/css/buttons.css" rel="stylesheet">
+    -->
+
+    <link href="assets/css/vendors.css" rel="stylesheet">
+    <link href="assets/css/main.css" rel="stylesheet">
+    <link href="assets/css/syntaxhighlighter/shCore.css" rel="stylesheet">
+
+    <!-- RS5.0 Stylesheet -->
+    <!--<link rel="stylesheet" type="text/css" href="assets/css/settings.css">
+    <link rel="stylesheet" type="text/css" href="assets/css/layers.css">
+    <link rel="stylesheet" type="text/css" href="assets/css/navigation.css">-->
+
+    <link href="assets/css/style-blue.css" rel="stylesheet" title="default">
+    <link href="assets/css/width-full.css" rel="stylesheet" title="default">
+
+
+
+    <!-- HTML5 shim and Respond.js IE8 support of HTML5 elements and media queries -->
+    <!--[if lt IE 9]>
+        <script src="assets/js/html5shiv.min.js"></script>
+        <script src="assets/js/respond.min.js"></script>
+    <![endif]-->
+</head>
+
+<!-- Preloader -->
+<div id="preloader">
+    <div id="status">&nbsp;</div>
+</div>
+
+<body>
+
+    <div class="sb-site-container">
+        <div class="boxed">
+
+            <header id="header-full-top" class="hidden-xs header-full-dark">
+                <div class="container">
+                    <div class="header-full-title">
+                        <h1 class="animated fadeInRight"><a href="index.html">Expert <span>exchange</span></a></h1>
+                        <p class="animated fadeInRight">Experts here</p>
+                    </div>
+                    <div class="wrapper pull-right">
+                        <form class="login-form"  method="POST" data-smartlock-autologin="true"
+                            data-smartlock-unmediated="" data-smartlock-save-signin="true">
+                            <label for="login-email">Email</label><input type="text" name="session_key" class="login-email"
+                                autocapitalize="off" tabindex="1" id="login-email" placeholder="Email" autofocus="autofocus">
+                            <label for="login-password"></label><input type="password" name="session_password" class="login-password"
+                                id="login-password" aria-required="true" tabindex="1" placeholder="Password">
+                            <input tabindex="1" id="login-submit" class="login submit-button" type="submit" value="Sign in" disabled="disabled">
+                            <a class="link-forgot-password" tabindex="1" href="https://www.linkedin.com/uas/request-password-reset?trk=uno-reg-guest-home-forgot-password">Forgot password?</a>
+                        </form>
+                    </div>
+                </div>
+                <!-- container -->
+            </header>
+            <!-- header-full -->
+            <div class="main_background">
+
+                <div class="reg-form panel-body">
+                    <form role="form" class="registraionForm">
+
+                        <h1 class="title">Be great at what you do</h1>
+                        <h2 class="subtitle">Get started - it's free.</h2>
+                        <div class="reg-alert" tabindex="-1"><span class="alert-content">Please enter your first name</span><button type="button" class="dismiss-alert"><span class="screen-reader-text">Close</span></button></div>
+                        <div id=firstlevelFields>
+                            <div class="form-group">
+                                <label for="InputEmail">Email<sup>*</sup></label>
+                                <input type="email" class="form-control" id="InputEmail" required>
+                            </div>
+                            <div class="form-group">
+                                <label for="InputFirstName">First Name</label>
+                                <input type="text" class="form-control" id="InputFirstName" required oninvalid="this.setCustomValidity('Enter First Name Here')"
+                                    oninput="setCustomValidity('')">
+                            </div>
+                            <div class="form-group">
+                                <label for="InputLastName">Last Name</label>
+                                <input type="text" class="form-control" id="InputLastName" required data-errormessage-value-missing="Please input something">
+                            </div>
+
+                            <div class="row">
+                                <div class="col-md-6">
+                                    <div class="form-group">
+                                        <label for="InputPassword">Password<sup>*</sup></label>
+                                        <input type="password" class="form-control" id="InputPassword" required>
+                                    </div>
+                                </div>
+                                <div class="col-md-6">
+                                    <div class="form-group">
+                                        <label for="InputConfirmPassword">Confirm Password<sup>*</sup></label>
+                                        <input type="password" class="form-control" id="InputConfirmPassword" required>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="row">
+                                <div class="col-md-10">
+                                    <div class="checkbox checkbox-inline">
+                                        <input type="checkbox" id="inlineCheckbox1" value="option1">
+                                        <label for="inlineCheckbox1">I read <a href="#">Terms and Conditions</a>.</label>
+                                    </div>
+                                </div>
+                                <div class="col-md-2">
+                                    <button type="submit" class="btn btn-ar btn-primary pull-right" onclick="onSignup(); return false;">SignUp</button>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="secondlevelFields">
+                            <div class="form-group">
+                                <label for="InputCountry">Country<sup>*</sup></label>
+                                <select class="form-control bfh-countries" id="InputCountry" data-country="US" data-flags="true"></select>
+                                <!--<input type="text" class="form-control" id="InputCountry" required>-->
+                            </div>
+                            <div class="form-group">
+                                <label for="InputContact">Contact No</label>
+                                <input type="text" class="form-control" id="InputContact" required oninvalid="this.setCustomValidity('Enter First Name Here')"
+                                    oninput="setCustomValidity('')">
+                            </div>
+                            <div class="form-group">
+                                <label for="InputPin">Pin Code</label>
+                                <input type="text" class="form-control" id="InputPin" required data-errormessage-value-missing="Please input something">
+                            </div>
+                            <div class="row">
+                                <div class="col-md-6">
+                                    <div class="form-group">
+                                        <label for="InputPassword">Are you an expert?<sup>*</sup></label>
+
+                                    </div>
+                                </div>
+                                <div class="col-md-6">
+                                    <div class="form-group">
+                                        <div class="checkbox checkbox-inline">
+
+                                            <input type="checkbox" id="isExpert" value="yes" onchange="displayExpert(this.checked)">
+                                            <label for="isExpert">Yes</label>
+                                        </div>
+                                        <div class="checkbox checkbox-inline">
+
+                                            <input type="checkbox" id="noExpert" value="no" onchange="displayIntrests(this.checked)">
+                                            <label for="noExpert">No</label>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <!--<div class="form-group" id="experts">
+                                <label for="InputLastName">Last Name</label>
+                                <input type="text" class="form-control" id="InputLastName" required data-errormessage-value-missing="Please input something">
+                            </div>
+                            <div class="form-group" id="interests">
+                                <label for="InputLastName">Last Name</label>
+                                <input type="text" class="form-control" id="InputLastName" required data-errormessage-value-missing="Please input something">
+                            </div>-->
+                            <!--<div class="col-md-4">
+                                <button type="submit" class="btn btn-ar btn-primary pull-right">Register</button>
+                            </div>-->
+                            <div class="row">
+                                <div class="col-md-6">
+
+                                    <a class="prev pull-left" onclick="showFirstlevelDetails();return false;">
+                                        Prev<< </a>
+                                </div>
+                                <div class="col-md-6">
+
+                                    <!--<a class="prev pull-right">
+                                        Next>></a>-->
+                                </div>
+
+                            </div>
+
+                        </div>
+                        <div class="thirdlevelExpertFields">
+                            <div class="form-group">
+                                <label for="selectExpertiseArea">Expertise Area<sup>*</sup></label>
+                                <select class="form-control" id="selectExpertiseArea">
+                              
+                                <option>Technology</option>
+                                <option>Govt and LEA</option>
+                                <option>Social media</option>
+                                <option>Cyber Legal expert etc</option>
+                              
+                              </select>
+                            </div>
+                            <div class="form-group">
+                                <label for="selectType">Organization type<sup>*</sup></label>
+                                <select class="form-control" id="selectType">
+                              
+                                <option>Self owned</option>
+                                <option>Corporate</option>
+                                <option>Govt and LEA</option>
+                                                          
+                              </select>
+                            </div>
+                            <div class="form-group">
+                                <label for="orgName">Organization Name<sup>*</sup></label>
+                                <input type="text" class="form-control" id="orgName" required>
+                            </div>
+                            <div class="form-group">
+                                <label for="jobTitle">Job Title<sup>*</sup></label>
+                                <input type="text" class="form-control" id="jobTitle" required>
+                            </div>
+
+                            <div class="row">
+                                <div class="col-md-10">
+                                    <!--<div class="checkbox checkbox-inline">
+                                        <input type="checkbox" id="inlineCheckbox2" value="option1">
+                                        <label for="inlineCheckbox1">I read <a href="#">Terms and Conditions</a>.</label>
+                                    </div>-->
+                                </div>
+                                <div class="col-md-2">
+                                    <button type="submit" class="btn btn-ar btn-primary pull-right" onclick="onRegister(); return false;">Register</button>
+                                </div>
+                            </div>
+                              <!--<div class="row">
+                              
+                                <div class="col-md-6 pull-left">
+
+                                    <a class="prev pull-left" onclick="showSecondlevelDetails();return false;">
+                                        Prev<<</a>
+                                </div>
+
+                            </div>-->
+                        </div>
+                        <div class="thirdlevelNormalFields">
+                            <div class="form-group">
+                                <!--<label for="select">Interest Area<sup>*</sup></label>-->
+
+                            </div>
+                            <div class="row">
+                                <div class="col-md-12">
+                                    <div class="form-group">
+                                        <label for="InputPassword">Interest Area<sup>*</sup></label>
+
+                                    </div>
+
+                                    <div class="form-group">
+                                        <div class="checkbox checkbox-inline">
+
+                                            <input type="checkbox" id="first" value="first">
+                                            <label for="first">Staying up-to-date with the world</label>
+                                        </div>
+                                    </div>
+                                    <div class="form-group">
+                                        <div class="checkbox checkbox-inline">
+
+                                            <input type="checkbox" id="second" value="second">
+                                            <label for="second">Connect to experts</label>
+                                        </div>
+                                    </div>
+                                    <div class="form-group">
+                                        <div class="checkbox checkbox-inline">
+
+                                            <input type="checkbox" id="third" value="third">
+                                            <label for="third">Help Others</label>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="row">
+                                <div class="col-md-10">
+                                    <div class="checkbox checkbox-inline">
+                                        <!--<input type="checkbox" id="inlineCheckbox3" value="option1">
+                                        <label for="inlineCheckbox1">I read <a href="#">Terms and Conditions</a>.</label>-->
+                                    </div>
+                                </div>
+                                <div class="col-md-2">
+                                    <button type="submit" class="btn btn-ar btn-primary pull-right" onclick="onRegister(); return false;">Register</button>
+                                </div>
+                            </div>
+                              <!--<div class="row">
+                               
+                                <div class="col-md-6 pull-left">
+
+                                    <a class="prev pull-left" onclick="showSecondLevelDetails();return false;">
+                                        Prev<<</a>
+                                </div>
+
+                            </div>-->
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+
+        <aside id="footer-widgets">
+            <div class="container">
+                <div class="row">
+                    <div class="col-md-4">
+                        <h3 class="footer-widget-title">Sitemap</h3>
+                        <ul class="list-unstyled three_cols">
+                            <li><a href="index.html">Home</a></li>
+                            <li><a href="blog.html">Blog</a></li>
+                            <li><a href="portfolio_sidebar.html">Portafolio</a></li>
+                            <li><a href="portfolio_topvar.html">Works</a></li>
+                            <li><a href="page_timeline_left.html">Timeline</a></li>
+                            <li><a href="page_pricing.html">Pricing</a></li>
+                            <li><a href="page_about2.html">About Us</a></li>
+                            <li><a href="page_team.html">Our Team</a></li>
+                            <li><a href="page_services.html">Services</a></li>
+                            <li><a href="page_support.html">FAQ</a></li>
+                            <li><a href="page_login_full.html">Login</a></li>
+                            <li><a href="page_contact.html">Contact</a></li>
+                        </ul>
+                        <h3 class="footer-widget-title">Subscribe</h3>
+                        <p>Lorem ipsum Amet fugiat elit nisi anim mollit minim labore ut esse Duis ullamco ad dolor veniam velit.</p>
+                        <div class="input-group">
+                            <input type="text" class="form-control" placeholder="Email Adress">
+                            <span class="input-group-btn">
+                        <button class="btn btn-ar btn-primary" type="button">Subscribe</button>
+                    </span>
+                        </div>
+                        <!-- /input-group -->
+                    </div>
+                    <div class="col-md-4">
+                        <div class="footer-widget">
+                            <h3 class="footer-widget-title">Recent Post</h3>
+                            <div class="media">
+                                <a class="pull-left" href="#"><img class="media-object" src="assets/img/demo/m2.jpg" width="75" height="75" alt="image"></a>
+                                <div class="media-body">
+                                    <h4 class="media-heading"><a href="#">Lorem ipsum Duis quis occaecat minim lorem ipsum tempor officia labor</a></h4>
+                                    <small>August 18, 2013</small>
+                                </div>
+                            </div>
+                            <div class="media">
+                                <a class="pull-left" href="#"><img class="media-object" src="assets/img/demo/m11.jpg" width="75" height="75" alt="image"></a>
+                                <div class="media-body">
+                                    <h4 class="media-heading"><a href="#">Lorem ipsum dolor excepteur sunt in lorem ipsum cillum tempor</a></h4>
+                                    <small>September 14, 2013</small>
+                                </div>
+                            </div>
+                            <div class="media">
+                                <a class="pull-left" href="#"><img class="media-object" src="assets/img/demo/m4.jpg" width="75" height="75" alt="image"></a>
+                                <div class="media-body">
+                                    <h4 class="media-heading"><a href="#">Lorem ipsum Dolor cupidatat minim adipisicing et fugiat</a></h4>
+                                    <small>October 9, 2013</small>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-4">
+                        <div class="footer-widget">
+                            <h3 class="footer-widget-title">Recent Works</h3>
+                            <div class="row">
+                                <div class="col-lg-6 col-md-6 col-sm-3 col-xs-6">
+                                    <a href="#" class="thumbnail"><img src="assets/img/demo/wf1.jpg" class="img-responsive" alt="Image"></a>
+                                </div>
+                                <div class="col-lg-6 col-md-6 col-sm-3 col-xs-6">
+                                    <a href="#" class="thumbnail"><img src="assets/img/demo/wf2.jpg" class="img-responsive" alt="Image"></a>
+                                </div>
+                                <div class="col-lg-6 col-md-6 col-sm-3 col-xs-6">
+                                    <a href="#" class="thumbnail"><img src="assets/img/demo/wf3.jpg" class="img-responsive" alt="Image"></a>
+                                </div>
+                                <div class="col-lg-6 col-md-6 col-sm-3 col-xs-6">
+                                    <a href="#" class="thumbnail"><img src="assets/img/demo/wf4.jpg" class="img-responsive" alt="Image"></a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!-- row -->
+            </div>
+            <!-- container -->
+        </aside>
+        <!-- footer-widgets -->
+        <footer id="footer">
+            <p>&copy; 2014 <a href="#">Artificial Reason</a>, inc. All rights reserved.</p>
+        </footer>
+
+    </div>
+    <!-- boxed -->
+    </div>
+    <!-- sb-site -->
+
+
+
+    <!-- Scripts -->
+    <!-- Compiled in vendors.js -->
+    <!--
+<script src="assets/js/jquery.min.js"></script>
+<script src="assets/js/jquery.cookie.js"></script>
+<script src="assets/js/imagesloaded.pkgd.min.js"></script>
+<script src="assets/js/bootstrap.min.js"></script>
+<script src="assets/js/bootstrap-switch.min.js"></script>
+<script src="assets/js/wow.min.js"></script>
+<script src="assets/js/slidebars.min.js"></script>
+<script src="assets/js/jquery.bxslider.min.js"></script>
+<script src="assets/js/holder.js"></script>
+<script src="assets/js/buttons.js"></script>
+<script src="assets/js/jquery.mixitup.min.js"></script>
+<script src="assets/js/circles.min.js"></script>
+<script src="assets/js/masonry.pkgd.min.js"></script>
+<script src="assets/js/jquery.matchHeight-min.js"></script>
+-->
+
+    <script src="assets/js/vendors.js"></script>
+
+    <!--<script type="text/javascript" src="assets/js/jquery.themepunch.tools.min.js?rev=5.0"></script>
+<script type="text/javascript" src="assets/js/jquery.themepunch.revolution.min.js?rev=5.0"></script>-->
+
+
+    <!-- Syntaxhighlighter -->
+    <script src="assets/js/syntaxhighlighter/shCore.js"></script>
+    <script src="assets/js/syntaxhighlighter/shBrushXml.js"></script>
+    <script src="assets/js/syntaxhighlighter/shBrushJScript.js"></script>
+
+    <script src="assets/js/DropdownHover.js"></script>
+    <script src="assets/js/app.js"></script>
+    <script src="assets/js/holder.js"></script>
+    <script src="assets/js/home_info.js"></script>
+    <script src="assets/js/main.js"></script>
+</body>
+
+</html>
